@@ -47,8 +47,6 @@ self.addEventListener('activate', (e) => {
 
 self.addEventListener('fetch', (e) => {
 	console.log('fetching');
-	let baseurl = 'https://api.football-data.org/v2/competitions/2021/standings';
-	
 	if(e.request.url.match(/^(http|https)/i)){
 		e.respondWith(
 			caches.match(e.request).then((cacheRes) => {

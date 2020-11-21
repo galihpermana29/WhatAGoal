@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 			let standings = data.standings;
 
 			standings
-				.filter((standing) => standing.type == 'TOTAL')
+				.filter((standing) => standing.type === 'TOTAL')
 				.forEach((standing) => {
 					showStandingsUCL(standing);
 				});
